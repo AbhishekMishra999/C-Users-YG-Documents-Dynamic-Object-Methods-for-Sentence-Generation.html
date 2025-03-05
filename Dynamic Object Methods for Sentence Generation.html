@@ -1,0 +1,37 @@
+<script>
+    let sentenceBuilder = {
+  subject: "i",
+  verb: "am",
+  object: "coding",
+  
+  buildSentence: function(){
+    if(this.subject==""||this.verb==""||this.object==""){
+       console.log(`"Incomplete Sentence"`)
+    }else{
+       console.log(`"${this.subject} ${this.verb} ${this.object}"`)
+    }
+  },
+  
+  updateProperty: function(property ,value){
+    if(property == "subject"){
+      this.subject = value
+    }else if(property == "verb"){
+      this.verb = value
+    }else if(property == "object"){
+      this.object = value
+    }else{
+      console.log(`"Invalid Property"`);
+    }
+     
+  }
+}
+sentenceBuilder.buildSentence();
+sentenceBuilder.updateProperty("verb", "am learning"); 
+sentenceBuilder.buildSentence();
+sentenceBuilder.updateProperty("subject", "The cat");
+sentenceBuilder.buildSentence();
+sentenceBuilder.updateProperty("mood", "happy");
+sentenceBuilder.updateProperty("verb", ""); 
+sentenceBuilder.buildSentence();
+
+</script>
